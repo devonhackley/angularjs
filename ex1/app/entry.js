@@ -4,7 +4,7 @@
  const pascalcase = require('pascalcase');
  const uiRouter = require('angular-ui-router');
  const uiBootstrap = require('angular-ui-bootstrap');
- const angularDemo = angular.module('angularDemo', [uiRouter]);
+ const angularDemo = angular.module('angularDemo', [uiRouter, uiBootstrap]);
 
 let context = require.context('./component', true, /\.js$/)
 context.keys().forEach(key => {
