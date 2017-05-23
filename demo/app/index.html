@@ -7,14 +7,23 @@
   <body>
     <header></header>
     <main>
+      <div class="jumbotron">
+        <p>yo</p>
+      </div>
       <section class="container" ng-controller="CowsayController">
         <h2>{{ cowsayCtrl.title  }}</h2>
         <pre class="cow">
           {{cowsayCtrl.speak(cowsayCtrl.text)}}
         </pre>
+        <pre class="cow">
+          {{cowsayCtrl.wat()}}
+        </pre>
 
-        <input type="text" ng-model="cowsayCtrl.text">
+
+        <input type="text" ng-model="cowsayCtrl.text" class="input-std">
         <button ng-click="cowsayCtrl.logger(cowsayCtrl.text)">What yo say?</button>
+        <button ng-click="cowsayCtrl.save()">Save?</button>
+        <button ng-click="cowsayCtrl.undo()">Undo?</button>
       </section>
     </main>
     <footer></footer>
